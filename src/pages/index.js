@@ -84,7 +84,7 @@ export default function Home() {
         </div>
 
         {/* Terminal / Command Preview */}
-        <div className="mt-12 max-w-[606px] mx-auto" data-aos="fade-up">
+        <div className="mt-12 max-w-[616px] mx-auto" data-aos="fade-up">
           <div className="bg-zinc-900 rounded-xl shadow-lg overflow-hidden">
             {/* Terminal Header */}
             <div className="flex items-center justify-between px-4 py-2 bg-zinc-800 border-b border-zinc-700">
@@ -108,7 +108,13 @@ export default function Home() {
             {/* Terminal Body */}
             <div className="px-4 py-4 text-green-400 font-mono text-sm">
               <p className="text-slate-400 mb-1">// Quick Start (Pages Router)</p>
-              <code>npx create-next-app -e https://github.com/dwiwijaya/nextjs-landing-starter</code>
+              <code className="space-x-1">
+                <span className="text-green-400 font-semibold">npx</span>{' '}
+                <span className="text-white">create-next-app</span>{' '}
+                <span className="text-green-400">-e</span>{' '}
+                <span className="text-yellow-300">https://github.com/dwiwijaya/nextjs-landing-starter</span>
+              </code>
+
             </div>
           </div>
         </div>
