@@ -122,69 +122,67 @@ export default function Home() {
           </section>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12">
-          <div data-aos="fade-up" className="bg-white p-4  sm:p-6 rounded-2xl border border-slate-200 transition">
-            <PiCodeBlockLight className="text-3xl text-indigo-500 mb-4" />
-            <h3 className="text-lg font-semibold mb-2">Modern Stack</h3>
-            <p className="text-slate-600 text-sm">Includes Tailwind, Framer Motion, SEO, AOS, and more — ready to go.</p>
+        <div className="px-6 pb-6 sm:pb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12">
+            <div data-aos="fade-up" className="bg-white p-4  sm:p-6 rounded-2xl border border-slate-200 transition">
+              <PiCodeBlockLight className="text-3xl text-indigo-500 mb-4" />
+              <h3 className="text-lg font-semibold mb-2">Modern Stack</h3>
+              <p className="text-slate-600 text-sm">Includes Tailwind, Framer Motion, SEO, AOS, and more — ready to go.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100" className="bg-white p-4  sm:p-6 rounded-2xl border border-slate-200 transition">
+              <PiWrenchLight className="text-3xl text-indigo-500 mb-4" />
+              <h3 className="text-lg font-semibold mb-2">Built for Devs</h3>
+              <p className="text-slate-600 text-sm">Clean folder structure, customizable components, and clear comments.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" className="bg-white p-4  sm:p-6 rounded-2xl border border-slate-200 transition">
+              <PiRocketLight className="text-3xl text-indigo-500 mb-4" />
+              <h3 className="text-lg font-semibold mb-2">Deploy in Seconds</h3>
+              <p className="text-slate-600 text-sm">Optimized for Vercel with minimal setup and blazing-fast performance.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300" className="bg-white p-4  sm:p-6 rounded-2xl border border-slate-200 transition">
+              <PiCodesandboxLogoLight className="text-3xl text-indigo-500 mb-4" />
+              <h3 className="text-lg font-semibold mb-2">Open Source</h3>
+              <p className="text-slate-600 text-sm">Free to use and fully open-source. Clone it, fork it, make it your own!</p>
+            </div>
           </div>
-          <div data-aos="fade-up" data-aos-delay="100" className="bg-white p-4  sm:p-6 rounded-2xl border border-slate-200 transition">
-            <PiWrenchLight className="text-3xl text-indigo-500 mb-4" />
-            <h3 className="text-lg font-semibold mb-2">Built for Devs</h3>
-            <p className="text-slate-600 text-sm">Clean folder structure, customizable components, and clear comments.</p>
-          </div>
-          <div data-aos="fade-up" data-aos-delay="200" className="bg-white p-4  sm:p-6 rounded-2xl border border-slate-200 transition">
-            <PiRocketLight className="text-3xl text-indigo-500 mb-4" />
-            <h3 className="text-lg font-semibold mb-2">Deploy in Seconds</h3>
-            <p className="text-slate-600 text-sm">Optimized for Vercel with minimal setup and blazing-fast performance.</p>
-          </div>
-          <div data-aos="fade-up" data-aos-delay="300" className="bg-white p-4  sm:p-6 rounded-2xl border border-slate-200 transition">
-            <PiCodesandboxLogoLight className="text-3xl text-indigo-500 mb-4" />
-            <h3 className="text-lg font-semibold mb-2">Open Source</h3>
-            <p className="text-slate-600 text-sm">Free to use and fully open-source. Clone it, fork it, make it your own!</p>
-          </div>
-        </div>
 
+          <section className="max-w-4xl mx-auto text-center" data-aos="fade-up">
+            <h2 className="text-xl md:text-3xl font-bold text-slate-900 mb-2">
+              Pre-installed & Configured Tools
+            </h2>
+            <p className="text-slate-600 mb-12 max-w-3xl mx-auto">
+              Start building without the hassle — these popular libraries are already integrated and ready to go:
+            </p>
 
-
-        <section className="max-w-4xl mx-auto text-center pb-12" data-aos="fade-up">
-          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">
-            Pre-installed & Configured Tools
-          </h2>
-          <p className="text-slate-600 mb-12 max-w-3xl mx-auto">
-            Start building without the hassle — these popular libraries are already integrated and ready to go:
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
-            {[
-              { icon: <PiSparkleLight className="text-2xl text-indigo-500" />, title: "AOS", desc: "Animate on Scroll — adds smooth entrance animations to your elements." },
-              { icon: <PiCloudLightningLight className="text-2xl text-indigo-500" />, title: "Axios", desc: "Promise-based HTTP client for easy API calls and data fetching." },
-              { icon: <PiBracketsCurlyLight className="text-2xl text-indigo-500" />, title: "clsx", desc: "Utility for conditionally joining classNames — great for dynamic styling." },
-              { icon: <PiPlayCircleLight className="text-2xl text-indigo-500" />, title: "Framer Motion", desc: "Add interactive animations to your components with ease." },
-              { icon: <PiGlobeLight className="text-2xl text-indigo-500" />, title: "next-seo", desc: "Easily manage SEO meta tags and Open Graph data." },
-              { icon: <PiCloudArrowDownLight className="text-2xl text-indigo-500" />, title: "next-pwa", desc: "Enable offline support & PWA capabilities out of the box." },
-              { icon: <PiNotePencilLight className="text-2xl text-indigo-500" />, title: "react-hook-form", desc: "Efficient and flexible form management for React." },
-              { icon: <PiPaintBrushBroadLight className="text-2xl text-indigo-500" />, title: "next-themes", desc: "Easily switch between light and dark mode with theme context." },
-              { icon: <PiShieldCheckLight className="text-2xl text-indigo-500" />, title: "zod", desc: "Schema-based validation for safer and cleaner forms or API inputs." },
-              { icon: <PiArrowLineRightLight className="text-2xl text-indigo-500" />, title: "nprogress", desc: "Progress bar for page transitions and async loading indicators." },
-            ].map((tool, i) => (
-              <div
-                key={tool.title}
-                data-aos="fade-up"
-                data-aos-delay={i * 100}
-                className="bg-white p-5 rounded-2xl border border-slate-200"
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  {tool.icon}
-                  <h3 className="font-semibold text-slate-800">{tool.title}</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+              {[
+                { icon: <PiSparkleLight className="text-2xl text-indigo-500" />, title: "AOS", desc: "Animate on Scroll — adds smooth entrance animations to your elements." },
+                { icon: <PiCloudLightningLight className="text-2xl text-indigo-500" />, title: "Axios", desc: "Promise-based HTTP client for easy API calls and data fetching." },
+                { icon: <PiBracketsCurlyLight className="text-2xl text-indigo-500" />, title: "clsx", desc: "Utility for conditionally joining classNames — great for dynamic styling." },
+                { icon: <PiPlayCircleLight className="text-2xl text-indigo-500" />, title: "Framer Motion", desc: "Add interactive animations to your components with ease." },
+                { icon: <PiGlobeLight className="text-2xl text-indigo-500" />, title: "next-seo", desc: "Easily manage SEO meta tags and Open Graph data." },
+                { icon: <PiCloudArrowDownLight className="text-2xl text-indigo-500" />, title: "next-pwa", desc: "Enable offline support & PWA capabilities out of the box." },
+                { icon: <PiNotePencilLight className="text-2xl text-indigo-500" />, title: "react-hook-form", desc: "Efficient and flexible form management for React." },
+                { icon: <PiPaintBrushBroadLight className="text-2xl text-indigo-500" />, title: "next-themes", desc: "Easily switch between light and dark mode with theme context." },
+                { icon: <PiShieldCheckLight className="text-2xl text-indigo-500" />, title: "zod", desc: "Schema-based validation for safer and cleaner forms or API inputs." },
+                { icon: <PiArrowLineRightLight className="text-2xl text-indigo-500" />, title: "nprogress", desc: "Progress bar for page transitions and async loading indicators." },
+              ].map((tool, i) => (
+                <div
+                  key={tool.title}
+                  data-aos="fade-up"
+                  data-aos-delay={i * 100}
+                  className="bg-white p-5 rounded-2xl border border-slate-200"
+                >
+                  <div className="flex items-center gap-3 mb-2">
+                    {tool.icon}
+                    <h3 className="font-semibold text-slate-800">{tool.title}</h3>
+                  </div>
+                  <p className="text-slate-600 text-sm">{tool.desc}</p>
                 </div>
-                <p className="text-slate-600 text-sm">{tool.desc}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-
+              ))}
+            </div>
+          </section>
+        </div>
       </main>
     </>
   )
