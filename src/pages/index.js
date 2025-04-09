@@ -31,13 +31,13 @@ export default function Home() {
       <Head>
         <title>Next.js Starter Landing</title>
       </Head>
-      <main className={`${plusJakarta.className} bg-gradient-to-b from-slate-50 to-white text-slate-800`}>
+      <main className={`${plusJakarta.className} bg-slate-50 text-slate-800`}>
 
-        <div className="min-h-[100svh] px-6 py-12 flex flex-col items-center justify-between">
+        <div className="bg-gradient-to-b from-indigo-100 to-slate-50 min-h-[100svh] px-6 py-12 flex flex-col items-center justify-between">
 
           <div className="max-w-6xl mx-auto text-center flex-1 flex items-center">
             <div>
-              <div className="inline-block px-3 py-1 text-sm bg-indigo-100 text-indigo-700 rounded-full font-medium mb-4 animate-pulse">
+              <div className="inline-block px-3 py-2 text-sm bg-indigo-200 text-indigo-700 rounded-full font-medium mb-4 animate-pulse">
                 🚀 Developer Starter Template
               </div>
               <motion.h1
