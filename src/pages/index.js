@@ -31,7 +31,7 @@ export default function Home() {
       <Head>
         <title>Next.js Starter Landing</title>
       </Head>
-      <main className={`${plusJakarta.className} min-h-screen bg-gradient-to-b from-slate-50 to-white px-6 py-12 text-slate-800`}>
+      <main className={`${plusJakarta.className} flex flex-col gap-12 min-h-screen bg-gradient-to-b from-slate-50 to-white px-6 py-12 text-slate-800`}>
 
         <div className="max-w-6xl mx-auto text-center">
           <div className="inline-block px-3 py-1 text-sm bg-indigo-100 text-indigo-700 rounded-full font-medium mb-4 animate-pulse">
@@ -60,7 +60,7 @@ export default function Home() {
         </div>
 
         {/* Feature Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
           <div data-aos="fade-up" className="bg-white p-4  sm:p-6 rounded-2xl border border-slate-200 transition">
             <PiCodeBlockLight className="text-3xl text-indigo-500 mb-4" />
             <h3 className="text-lg font-semibold mb-2">Modern Stack</h3>
@@ -84,7 +84,7 @@ export default function Home() {
         </div>
 
         {/* Terminal / Command Preview */}
-        <div className="mt-12 max-w-[616px] mx-auto" data-aos="fade-up">
+        <div className="max-w-[616px] mx-auto" data-aos="fade-up">
           <div className="bg-zinc-900 rounded-xl shadow-lg overflow-hidden">
             {/* Terminal Header */}
             <div className="flex items-center justify-between px-4 py-2 bg-zinc-800 border-b border-zinc-700">
@@ -119,11 +119,11 @@ export default function Home() {
           </div>
         </div>
 
-        <section className="max-w-4xl mx-auto mt-20 text-center" data-aos="fade-up">
+        <section className="max-w-4xl mx-auto text-center" data-aos="fade-up">
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">
             Pre-installed & Configured Tools
           </h2>
-          <p className="text-slate-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-slate-600 mb-8 max-w-3xl mx-auto">
             Start building without the hassle — these popular libraries are already integrated and ready to go:
           </p>
 
