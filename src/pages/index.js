@@ -51,22 +51,22 @@ export default function Home() {
 
         {/* Feature Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-12 max-w-6xl mx-auto">
-          <div data-aos="fade-up" className="bg-white p-6 rounded-2xl border border-slate-200 transition">
+          <div data-aos="fade-up" className="bg-white p-4  sm:p-6 rounded-2xl border border-slate-200 transition">
             <FaCode className="text-3xl text-indigo-500 mb-4" />
             <h3 className="text-lg font-semibold mb-2">Modern Stack</h3>
             <p className="text-slate-600 text-sm">Includes Tailwind, Framer Motion, SEO, AOS, and more — ready to go.</p>
           </div>
-          <div data-aos="fade-up" data-aos-delay="100" className="bg-white p-6 rounded-2xl border border-slate-200 transition">
+          <div data-aos="fade-up" data-aos-delay="100" className="bg-white p-4  sm:p-6 rounded-2xl border border-slate-200 transition">
             <FaTools className="text-3xl text-indigo-500 mb-4" />
             <h3 className="text-lg font-semibold mb-2">Built for Devs</h3>
             <p className="text-slate-600 text-sm">Clean folder structure, customizable components, and clear comments.</p>
           </div>
-          <div data-aos="fade-up" data-aos-delay="200" className="bg-white p-6 rounded-2xl border border-slate-200 transition">
+          <div data-aos="fade-up" data-aos-delay="200" className="bg-white p-4  sm:p-6 rounded-2xl border border-slate-200 transition">
             <FaRocket className="text-3xl text-indigo-500 mb-4" />
             <h3 className="text-lg font-semibold mb-2">Deploy in Seconds</h3>
             <p className="text-slate-600 text-sm">Optimized for Vercel with minimal setup and blazing-fast performance.</p>
           </div>
-          <div data-aos="fade-up" data-aos-delay="300" className="bg-white p-6 rounded-2xl border border-slate-200 transition">
+          <div data-aos="fade-up" data-aos-delay="300" className="bg-white p-4  sm:p-6 rounded-2xl border border-slate-200 transition">
             <FaCode className="text-3xl text-indigo-500 mb-4" />
             <h3 className="text-lg font-semibold mb-2">Open Source</h3>
             <p className="text-slate-600 text-sm">Free to use and fully open-source. Clone it, fork it, make it your own!</p>
@@ -74,7 +74,7 @@ export default function Home() {
         </div>
 
         {/* Terminal / Command Preview */}
-        <div className="mt-12 max-w-xl mx-auto" data-aos="fade-up">
+        <div className="mt-12 max-w-[606px] mx-auto" data-aos="fade-up">
           <div className="bg-zinc-900 rounded-xl shadow-lg overflow-hidden">
             {/* Terminal Header */}
             <div className="flex items-center justify-between px-4 py-2 bg-zinc-800 border-b border-zinc-700">
@@ -96,7 +96,7 @@ export default function Home() {
             </div>
 
             {/* Terminal Body */}
-            <div className="px-6 py-4 text-green-400 font-mono text-sm">
+            <div className="px-4 py-4 text-green-400 font-mono text-sm">
               <p className="text-slate-400 mb-1">// Quick Start (Pages Router)</p>
               <code>npx create-next-app -e https://github.com/dwiwijaya/nextjs-landing-starter</code>
             </div>
