@@ -4,7 +4,7 @@ import { NextSeo } from 'next-seo'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { motion } from 'framer-motion'
-import { PiCodeBlockLight, PiWrenchLight, PiRocketLight, PiCodesandboxLogoLight, PiGithubLogo } from 'react-icons/pi'
+import { PiCodeBlockLight, PiWrenchLight, PiRocketLight, PiCodesandboxLogoLight, PiGithubLogo, PiSlidersHorizontalLight } from 'react-icons/pi'
 import {
   PiSparkleLight,            // AOS - animasi
   PiCloudLightningLight,     // Axios - networking/API
@@ -57,11 +57,11 @@ export default function Home() {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="max-w-4xl text-2xl md:text-6xl font-extrabold text-slate-900"
+                className="max-w-4xl text-2xl md:text-4xl lg:text-6xl font-extrabold text-slate-900"
               >
                 Build Fast with <span className="text-indigo-600">Landing Page Starter</span> for Developers
               </motion.h1>
-              <p className="mt-4 text-sm md:text-lg text-slate-600 max-w-2xl mx-auto">
+              <p className="mt-4 text-sm md:text-lg text-slate-600 max-w-lg md:max-w-2xl mx-auto">
                 Developer-focused starter using <strong>Next.js Pages Router</strong>, Tailwind CSS, Framer Motion, AOS, and SEO — all in one powerful template.
               </p>
               <a
@@ -122,7 +122,7 @@ export default function Home() {
           </section>
         </div>
 
-        <div className="px-6 pb-6 sm:pb-12">
+        <div className="px-6 pb-6 sm:pb-12 max-w-3xl sm:max-w-full mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12">
             {[
               { icon: <PiCodeBlockLight className="text-3xl text-indigo-500 mb-2" />, title: "Modern Stack", desc: "Includes Tailwind, Framer Motion, SEO, AOS, and more — ready to go.", delay: 0 },
@@ -153,10 +153,10 @@ export default function Home() {
                 { icon: <PiPlayCircleLight className="text-2xl text-indigo-500" />, title: "Framer Motion", desc: "Add interactive animations to your components with ease." },
                 { icon: <PiGlobeLight className="text-2xl text-indigo-500" />, title: "next-seo", desc: "Easily manage SEO meta tags and Open Graph data." },
                 { icon: <PiCloudArrowDownLight className="text-2xl text-indigo-500" />, title: "next-pwa", desc: "Enable offline support & PWA capabilities out of the box." },
-                { icon: <PiBracketsCurlyLight className="text-2xl text-indigo-500" />, title: "clsx", desc: "Utility for conditionally joining classNames — great for dynamic styling." },
-                { icon: <PiNotePencilLight className="text-2xl text-indigo-500" />, title: "react-hook-form", desc: "Efficient and flexible form management for React." },
                 { icon: <PiPaintBrushBroadLight className="text-2xl text-indigo-500" />, title: "next-themes", desc: "Easily switch between light and dark mode with theme context." },
-                { icon: <PiShieldCheckLight className="text-2xl text-indigo-500" />, title: "zod", desc: "Schema-based validation for safer and cleaner forms or API inputs." },
+                { icon: <PiNotePencilLight className="text-2xl text-indigo-500" />, title: "React Hook Form", desc: "Efficient and flexible form management for React." },
+                { icon: <PiSlidersHorizontalLight className="text-2xl text-indigo-500" />, title: "React Slick", desc: "Carousel/slider component for React with slick-style transitions." },
+                { icon: <PiBracketsCurlyLight className="text-2xl text-indigo-500" />, title: "clsx", desc: "Utility for conditionally joining classNames — great for dynamic styling." },
                 { icon: <PiArrowLineRightLight className="text-2xl text-indigo-500" />, title: "nprogress", desc: "Progress bar for page transitions and async loading indicators." },
               ].map((tool, i) => (
                 <div
