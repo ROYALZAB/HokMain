@@ -4,8 +4,16 @@ import { NextSeo } from 'next-seo'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { motion } from 'framer-motion'
-import { FaCode, FaTools, FaRocket } from 'react-icons/fa'
+import { PiCodeBlockLight, PiWrenchLight, PiRocketLight, PiCodesandboxLogoLight, PiGithubLogo } from 'react-icons/pi'
 import { useEffect, useState } from 'react'
+// Tambahkan di paling atas file `pages/index.js`
+import { Plus_Jakarta_Sans } from 'next/font/google'
+
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-jakarta',
+})
 
 export default function Home() {
   const [copied, setCopied] = useState(false)
@@ -23,7 +31,8 @@ export default function Home() {
       <Head>
         <title>Next.js Starter Landing</title>
       </Head>
-      <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white px-6 py-12 text-slate-800">
+      <main className={`${plusJakarta.className} min-h-screen bg-gradient-to-b from-slate-50 to-white px-6 py-12 text-slate-800`}>
+
         <div className="max-w-6xl mx-auto text-center">
           <div className="inline-block px-3 py-1 text-sm bg-indigo-100 text-indigo-700 rounded-full font-medium mb-4 animate-pulse">
             🚀 Developer Starter Template
@@ -43,8 +52,9 @@ export default function Home() {
             href="https://github.com/dwiwijaya/nextjs-landing-starter"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-block bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full font-semibold transition"
+            className="mt-8 inline-flex gap-1 items-center bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full text-sm transition"
           >
+            <PiGithubLogo size={18} />
             View on GitHub
           </a>
         </div>
@@ -52,22 +62,22 @@ export default function Home() {
         {/* Feature Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-12 max-w-6xl mx-auto">
           <div data-aos="fade-up" className="bg-white p-4  sm:p-6 rounded-2xl border border-slate-200 transition">
-            <FaCode className="text-3xl text-indigo-500 mb-4" />
+            <PiCodeBlockLight className="text-3xl text-indigo-500 mb-4" />
             <h3 className="text-lg font-semibold mb-2">Modern Stack</h3>
             <p className="text-slate-600 text-sm">Includes Tailwind, Framer Motion, SEO, AOS, and more — ready to go.</p>
           </div>
           <div data-aos="fade-up" data-aos-delay="100" className="bg-white p-4  sm:p-6 rounded-2xl border border-slate-200 transition">
-            <FaTools className="text-3xl text-indigo-500 mb-4" />
+            <PiWrenchLight className="text-3xl text-indigo-500 mb-4" />
             <h3 className="text-lg font-semibold mb-2">Built for Devs</h3>
             <p className="text-slate-600 text-sm">Clean folder structure, customizable components, and clear comments.</p>
           </div>
           <div data-aos="fade-up" data-aos-delay="200" className="bg-white p-4  sm:p-6 rounded-2xl border border-slate-200 transition">
-            <FaRocket className="text-3xl text-indigo-500 mb-4" />
+            <PiRocketLight className="text-3xl text-indigo-500 mb-4" />
             <h3 className="text-lg font-semibold mb-2">Deploy in Seconds</h3>
             <p className="text-slate-600 text-sm">Optimized for Vercel with minimal setup and blazing-fast performance.</p>
           </div>
           <div data-aos="fade-up" data-aos-delay="300" className="bg-white p-4  sm:p-6 rounded-2xl border border-slate-200 transition">
-            <FaCode className="text-3xl text-indigo-500 mb-4" />
+            <PiCodesandboxLogoLight className="text-3xl text-indigo-500 mb-4" />
             <h3 className="text-lg font-semibold mb-2">Open Source</h3>
             <p className="text-slate-600 text-sm">Free to use and fully open-source. Clone it, fork it, make it your own!</p>
           </div>
