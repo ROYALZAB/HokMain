@@ -46,7 +46,7 @@ export default function Home() {
       </Head>
       <main className={`${plusJakarta.className} bg-slate-50 text-slate-800`}>
 
-        <div className="bg-gradient-to-b from-indigo-100 to-slate-50 min-h-[100svh] px-6 py-12 flex flex-col items-center justify-between">
+        <div className="bg-gradient-to-b from-indigo-100 to-slate-50 min-h-[100svh] px-6 pt-12 pb-6 flex flex-col items-center justify-between">
 
           <div className="max-w-6xl mx-auto text-center flex-1 flex items-center">
             <div>
@@ -57,11 +57,11 @@ export default function Home() {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="max-w-4xl text-xl md:text-6xl font-extrabold text-slate-900"
+                className="max-w-4xl text-2xl md:text-6xl font-extrabold text-slate-900"
               >
                 Build Fast with <span className="text-indigo-600">Landing Page Starter</span> for Developers
               </motion.h1>
-              <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+              <p className="mt-4 text-sm md:text-lg text-slate-600 max-w-2xl mx-auto">
                 Developer-focused starter using <strong>Next.js Pages Router</strong>, Tailwind CSS, Framer Motion, AOS, and SEO — all in one powerful template.
               </p>
               <a
@@ -74,7 +74,7 @@ export default function Home() {
                 View on GitHub
               </a>
               {/* Terminal / Command Preview */}
-              <div className="my-8 max-w-[616px] mx-auto" data-aos="fade-up">
+              <div className="my-8 max-w-[616px] mx-auto text-sm" data-aos="fade-up">
                 <div className="bg-zinc-900 rounded-xl shadow-lg overflow-hidden">
                   {/* Terminal Header */}
                   <div className="flex items-center justify-between px-4 py-2 bg-zinc-800 border-b border-zinc-700">
@@ -116,7 +116,7 @@ export default function Home() {
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">
               What’s Inside This Starter?
             </h2>
-            <p className="text-slate-600 max-w-3xl mx-auto">
+            <p className="text-slate-600 text-sm sm:text-base max-w-3xl mx-auto">
               Everything you need to build fast, responsive, and production-ready websites — with zero setup.
             </p>
           </section>
@@ -124,33 +124,25 @@ export default function Home() {
 
         <div className="px-6 pb-6 sm:pb-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12">
-            <div data-aos="fade-up" className="bg-white p-4  sm:p-6 rounded-2xl border border-slate-200 transition">
-              <PiCodeBlockLight className="text-3xl text-indigo-500 mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Modern Stack</h3>
-              <p className="text-slate-600 text-sm">Includes Tailwind, Framer Motion, SEO, AOS, and more — ready to go.</p>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="100" className="bg-white p-4  sm:p-6 rounded-2xl border border-slate-200 transition">
-              <PiWrenchLight className="text-3xl text-indigo-500 mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Built for Devs</h3>
-              <p className="text-slate-600 text-sm">Clean folder structure, customizable components, and clear comments.</p>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="200" className="bg-white p-4  sm:p-6 rounded-2xl border border-slate-200 transition">
-              <PiRocketLight className="text-3xl text-indigo-500 mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Deploy in Seconds</h3>
-              <p className="text-slate-600 text-sm">Optimized for Vercel with minimal setup and blazing-fast performance.</p>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="300" className="bg-white p-4  sm:p-6 rounded-2xl border border-slate-200 transition">
-              <PiCodesandboxLogoLight className="text-3xl text-indigo-500 mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Open Source</h3>
-              <p className="text-slate-600 text-sm">Free to use and fully open-source. Clone it, fork it, make it your own!</p>
-            </div>
+            {[
+              { icon: <PiCodeBlockLight className="text-3xl text-indigo-500 mb-2" />, title: "Modern Stack", desc: "Includes Tailwind, Framer Motion, SEO, AOS, and more — ready to go.", delay: 0 },
+              { icon: <PiWrenchLight className="text-3xl text-indigo-500 mb-2" />, title: "Built for Devs", desc: "Clean folder structure, customizable components, and clear comments.", delay: 100 },
+              { icon: <PiRocketLight className="text-3xl text-indigo-500 mb-2" />, title: "Deploy in Seconds", desc: "Optimized for Vercel with minimal setup and blazing-fast performance.", delay: 200 },
+              { icon: <PiCodesandboxLogoLight className="text-3xl text-indigo-500 mb-2" />, title: "Open Source", desc: "Free to use and fully open-source. Clone it, fork it, make it your own!", delay: 300 },
+            ].map(({ i, icon, title, desc, delay }) => (
+              <div key={i} data-aos="fade-up" data-aos-delay={delay} className="bg-white p-4 sm:p-6 rounded-2xl border border-slate-200 transition">
+                {icon}
+                <h3 className="text-lg font-semibold mb-1">{title}</h3>
+                <p className="text-slate-600 text-sm">{desc}</p>
+              </div>
+            ))}
           </div>
 
           <section className="max-w-4xl mx-auto text-center" data-aos="fade-up">
             <h2 className="text-xl md:text-3xl font-bold text-slate-900 mb-2">
               Pre-installed & Configured Tools
             </h2>
-            <p className="text-slate-600 mb-12 max-w-3xl mx-auto">
+            <p className="text-slate-600 mb-12 text-sm sm:text-base max-w-3xl mx-auto">
               Start building without the hassle — these popular libraries are already integrated and ready to go:
             </p>
 
@@ -158,10 +150,10 @@ export default function Home() {
               {[
                 { icon: <PiSparkleLight className="text-2xl text-indigo-500" />, title: "AOS", desc: "Animate on Scroll — adds smooth entrance animations to your elements." },
                 { icon: <PiCloudLightningLight className="text-2xl text-indigo-500" />, title: "Axios", desc: "Promise-based HTTP client for easy API calls and data fetching." },
-                { icon: <PiBracketsCurlyLight className="text-2xl text-indigo-500" />, title: "clsx", desc: "Utility for conditionally joining classNames — great for dynamic styling." },
                 { icon: <PiPlayCircleLight className="text-2xl text-indigo-500" />, title: "Framer Motion", desc: "Add interactive animations to your components with ease." },
                 { icon: <PiGlobeLight className="text-2xl text-indigo-500" />, title: "next-seo", desc: "Easily manage SEO meta tags and Open Graph data." },
                 { icon: <PiCloudArrowDownLight className="text-2xl text-indigo-500" />, title: "next-pwa", desc: "Enable offline support & PWA capabilities out of the box." },
+                { icon: <PiBracketsCurlyLight className="text-2xl text-indigo-500" />, title: "clsx", desc: "Utility for conditionally joining classNames — great for dynamic styling." },
                 { icon: <PiNotePencilLight className="text-2xl text-indigo-500" />, title: "react-hook-form", desc: "Efficient and flexible form management for React." },
                 { icon: <PiPaintBrushBroadLight className="text-2xl text-indigo-500" />, title: "next-themes", desc: "Easily switch between light and dark mode with theme context." },
                 { icon: <PiShieldCheckLight className="text-2xl text-indigo-500" />, title: "zod", desc: "Schema-based validation for safer and cleaner forms or API inputs." },
@@ -171,7 +163,7 @@ export default function Home() {
                   key={tool.title}
                   data-aos="fade-up"
                   data-aos-delay={i * 100}
-                  className="bg-white p-5 rounded-2xl border border-slate-200"
+                  className="bg-white p-4 sm:p-6 rounded-2xl border border-slate-200"
                 >
                   <div className="flex items-center gap-3 mb-2">
                     {tool.icon}
