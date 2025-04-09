@@ -32,7 +32,7 @@ export default function Home() {
   const [copied, setCopied] = useState(false)
 
   useEffect(() => {
-    AOS.init({ duration: 800 })
+    AOS.init({ duration: 500 })
   }, [])
 
   return (
@@ -138,7 +138,7 @@ export default function Home() {
             ))}
           </div>
 
-          <section className="max-w-4xl mx-auto text-center" data-aos="fade-up">
+          <section className="max-w-4xl mx-auto text-center" >
             <h2 className="text-xl md:text-3xl font-bold text-slate-900 mb-2">
               Pre-installed & Configured Tools
             </h2>
@@ -153,15 +153,15 @@ export default function Home() {
                 { icon: <PiPlayCircleLight className="text-2xl text-indigo-500" />, title: "Framer Motion", desc: "Add interactive animations to your components with ease." },
                 { icon: <PiGlobeLight className="text-2xl text-indigo-500" />, title: "next-seo", desc: "Easily manage SEO meta tags and Open Graph data." },
                 { icon: <PiCloudArrowDownLight className="text-2xl text-indigo-500" />, title: "next-pwa", desc: "Enable offline support & PWA capabilities out of the box." },
-                { icon: <PiPaintBrushBroadLight className="text-2xl text-indigo-500" />, title: "next-themes", desc: "Easily switch between light and dark mode with theme context." },
+                { icon: <PiPaintBrushBroadLight className="text-2xl text-indigo-500" />, title: "next-themes", desc: "Easily switch theme mode with theme context." },
                 { icon: <PiNotePencilLight className="text-2xl text-indigo-500" />, title: "React Hook Form", desc: "Efficient and flexible form management for React." },
-                { icon: <PiSlidersHorizontalLight className="text-2xl text-indigo-500" />, title: "React Slick", desc: "Carousel/slider component for React with slick-style transitions." },
+                { icon: <PiSlidersHorizontalLight className="text-2xl text-indigo-500" />, title: "React Slick", desc: "Carousel component for React with slick-style transitions." },
                 { icon: <PiBracketsCurlyLight className="text-2xl text-indigo-500" />, title: "clsx", desc: "Utility for conditionally joining classNames — great for dynamic styling." },
                 { icon: <PiArrowLineRightLight className="text-2xl text-indigo-500" />, title: "nprogress", desc: "Progress bar for page transitions and async loading indicators." },
               ].map((tool, i) => (
                 <div
                   key={tool.title}
-                  data-aos="fade-up"
+                  data-aos="fade-right"
                   data-aos-delay={i * 100}
                   className="bg-white p-4 sm:p-6 rounded-2xl border border-slate-200"
                 >
