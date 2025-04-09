@@ -118,6 +118,59 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <section className="max-w-4xl mx-auto mt-20 text-center" data-aos="fade-up">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">
+            Pre-installed & Configured Tools
+          </h2>
+          <p className="text-slate-600 mb-8 max-w-2xl mx-auto">
+            Start building without the hassle — these popular libraries are already integrated and ready to go:
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+            <div className="bg-white p-5 rounded-2xl border border-slate-200">
+              <h3 className="font-semibold text-slate-800 mb-2">🎬 AOS</h3>
+              <p className="text-slate-600 text-sm">Animate on Scroll — adds smooth entrance animations to your elements.</p>
+            </div>
+            <div className="bg-white p-5 rounded-2xl border border-slate-200">
+              <h3 className="font-semibold text-slate-800 mb-2">⚡ Axios</h3>
+              <p className="text-slate-600 text-sm">Promise-based HTTP client for easy API calls and data fetching.</p>
+            </div>
+            <div className="bg-white p-5 rounded-2xl border border-slate-200">
+              <h3 className="font-semibold text-slate-800 mb-2">🎯 clsx</h3>
+              <p className="text-slate-600 text-sm">Utility for conditionally joining classNames — great for dynamic styling.</p>
+            </div>
+            <div className="bg-white p-5 rounded-2xl border border-slate-200">
+              <h3 className="font-semibold text-slate-800 mb-2">🎞️ Framer Motion</h3>
+              <p className="text-slate-600 text-sm">Add interactive animations to your components with ease.</p>
+            </div>
+            <div className="bg-white p-5 rounded-2xl border border-slate-200">
+              <h3 className="font-semibold text-slate-800 mb-2">🔍 next-seo</h3>
+              <p className="text-slate-600 text-sm">Easily manage SEO meta tags and Open Graph data.</p>
+            </div>
+            <div className="bg-white p-5 rounded-2xl border border-slate-200">
+              <h3 className="font-semibold text-slate-800 mb-2">📦 next-pwa</h3>
+              <p className="text-slate-600 text-sm">Enable offline support & PWA capabilities out of the box.</p>
+            </div>
+            <div className="bg-white p-5 rounded-2xl border border-slate-200">
+              <h3 className="font-semibold text-slate-800 mb-2">🧩 react-hook-form</h3>
+              <p className="text-slate-600 text-sm">Efficient and flexible form management for React.</p>
+            </div>
+            <div className="bg-white p-5 rounded-2xl border border-slate-200">
+              <h3 className="font-semibold text-slate-800 mb-2">🎨 next-themes</h3>
+              <p className="text-slate-600 text-sm">Easily switch between light and dark mode with theme context.</p>
+            </div>
+            <div className="bg-white p-5 rounded-2xl border border-slate-200">
+              <h3 className="font-semibold text-slate-800 mb-2">📈 zod</h3>
+              <p className="text-slate-600 text-sm">Schema-based validation for safer and cleaner forms or API inputs.</p>
+            </div>
+            <div className="bg-white p-5 rounded-2xl border border-slate-200">
+              <h3 className="font-semibold text-slate-800 mb-2">🚥 nprogress</h3>
+              <p className="text-slate-600 text-sm">Progress bar for page transitions and async loading indicators.</p>
+            </div>
+          </div>
+        </section>
+
       </main>
     </>
   )
