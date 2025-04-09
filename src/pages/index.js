@@ -5,6 +5,19 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { motion } from 'framer-motion'
 import { PiCodeBlockLight, PiWrenchLight, PiRocketLight, PiCodesandboxLogoLight, PiGithubLogo } from 'react-icons/pi'
+import {
+  PiSparkleLight,            // AOS - animasi
+  PiCloudLightningLight,     // Axios - networking/API
+  PiBracketsCurlyLight,      // clsx - class manipulation
+  PiPlayCircleLight,         // Framer Motion - animasi interaktif
+  PiGlobeLight,              // next-seo - SEO dan web
+  PiCloudArrowDownLight,     // next-pwa - offline/download/PWA
+  PiNotePencilLight,         // react-hook-form - form input
+  PiPaintBrushBroadLight,    // next-themes - tema/light-dark
+  PiShieldCheckLight,        // zod - validasi / keamanan
+  PiArrowLineRightLight      // nprogress - progress indicator
+} from 'react-icons/pi';
+
 import { useEffect, useState } from 'react'
 // Tambahkan di paling atas file `pages/index.js`
 import { Plus_Jakarta_Sans } from 'next/font/google'
@@ -144,16 +157,16 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
             {[
-              { title: "🎬 AOS", desc: "Animate on Scroll — adds smooth entrance animations to your elements." },
-              { title: "⚡ Axios", desc: "Promise-based HTTP client for easy API calls and data fetching." },
-              { title: "🎯 clsx", desc: "Utility for conditionally joining classNames — great for dynamic styling." },
-              { title: "🎞️ Framer Motion", desc: "Add interactive animations to your components with ease." },
-              { title: "🔍 next-seo", desc: "Easily manage SEO meta tags and Open Graph data." },
-              { title: "📦 next-pwa", desc: "Enable offline support & PWA capabilities out of the box." },
-              { title: "🧩 react-hook-form", desc: "Efficient and flexible form management for React." },
-              { title: "🎨 next-themes", desc: "Easily switch between light and dark mode with theme context." },
-              { title: "📈 zod", desc: "Schema-based validation for safer and cleaner forms or API inputs." },
-              { title: "🚥 nprogress", desc: "Progress bar for page transitions and async loading indicators." },
+              { icon: <PiSparkleLight className="text-2xl text-indigo-500" />, title: "AOS", desc: "Animate on Scroll — adds smooth entrance animations to your elements." },
+              { icon: <PiCloudLightningLight className="text-2xl text-indigo-500" />, title: "Axios", desc: "Promise-based HTTP client for easy API calls and data fetching." },
+              { icon: <PiBracketsCurlyLight className="text-2xl text-indigo-500" />, title: "clsx", desc: "Utility for conditionally joining classNames — great for dynamic styling." },
+              { icon: <PiPlayCircleLight className="text-2xl text-indigo-500" />, title: "Framer Motion", desc: "Add interactive animations to your components with ease." },
+              { icon: <PiGlobeLight className="text-2xl text-indigo-500" />, title: "next-seo", desc: "Easily manage SEO meta tags and Open Graph data." },
+              { icon: <PiCloudArrowDownLight className="text-2xl text-indigo-500" />, title: "next-pwa", desc: "Enable offline support & PWA capabilities out of the box." },
+              { icon: <PiNotePencilLight className="text-2xl text-indigo-500" />, title: "react-hook-form", desc: "Efficient and flexible form management for React." },
+              { icon: <PiPaintBrushBroadLight className="text-2xl text-indigo-500" />, title: "next-themes", desc: "Easily switch between light and dark mode with theme context." },
+              { icon: <PiShieldCheckLight className="text-2xl text-indigo-500" />, title: "zod", desc: "Schema-based validation for safer and cleaner forms or API inputs." },
+              { icon: <PiArrowLineRightLight className="text-2xl text-indigo-500" />, title: "nprogress", desc: "Progress bar for page transitions and async loading indicators." },
             ].map((tool, i) => (
               <div
                 key={tool.title}
@@ -161,7 +174,10 @@ export default function Home() {
                 data-aos-delay={i * 100}
                 className="bg-white p-5 rounded-2xl border border-slate-200"
               >
-                <h3 className="font-semibold text-slate-800 mb-2">{tool.title}</h3>
+                <div className="flex items-center gap-3 mb-2">
+                  {tool.icon}
+                  <h3 className="font-semibold text-slate-800">{tool.title}</h3>
+                </div>
                 <p className="text-slate-600 text-sm">{tool.desc}</p>
               </div>
             ))}
