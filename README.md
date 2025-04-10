@@ -1,40 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# 🚀 Next.js Landing Page Starter
 
-## Getting Started
+A blazing-fast ⚡, modern 🧩, and developer-friendly 🛠️ starter template for building beautiful **landing pages** with **Next.js** pages router.
 
-First, run the development server:
+Save hours of repetitive setup! This template comes pre-configured with essential tools like **SEO**, **PWA**, **AOS**, **Framer Motion**, and more — so you can jump straight into building **awesome content**, not boilerplate.
+
+![Preview Screenshot](./assets/preview.png)
+
+---
+
+## ✨ Why Use This Starter?
+
+- ✅ **Modern Stack** — Built with [Next.js](https://nextjs.org/) and [Tailwind CSS](https://tailwindcss.com/) for fast, responsive UI development.
+- 🎯 **SEO & PWA Ready** — Pre-configured with `next-seo` and `next-pwa` to ensure best practices and offline support from day one.
+- 🎨 **Animations Out of the Box** — Smooth scroll effects via AOS and powerful animations via Framer Motion.
+- ⚙️ **Instant Setup** — Skip tedious configurations like sitemap, metadata, theming, and start shipping fast.
+- ☁️ **Deploy Instantly** — Optimized for one-click deployment with [Vercel](https://vercel.com/).
+
+---
+
+## 🚀 Getting Started
+
+Create your project using the following command:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npx create-next-app -e https://github.com/dwiwijaya/nextjs-landing-starter
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then start the development server:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+cd nextjs-landing-starter
+npm install
+npm run dev
+```
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Or clone this project using this following command:
+ ```bash
+git clone https://github.com/dwiwijaya/nextjs-landing-starter
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+Open your browser at [http://localhost:3000](http://localhost:3000) to see it in action.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🧰 What's Included?
 
-To learn more about Next.js, take a look at the following resources:
+Here’s a curated list of tools and libraries baked into this template:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+| Tool | Purpose |
+|------|---------|
+| **AOS** | Animate elements on scroll |
+| **Axios** | HTTP client for API requests |
+| **Framer Motion** | Smooth component animations |
+| **next-seo** | SEO optimization & Open Graph tags |
+| **next-pwa** | Offline support & PWA integration |
+| **next-themes** | Dark/light theme switching |
+| **React Hook Form** | Flexible and performant form handling |
+| **React Slick** | Beautiful and responsive carousels |
+| **clsx** | Conditional class name utility |
+| **nprogress** | Loading bar on page transitions |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## ⚡ Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is fully optimized for **Vercel**. Just push your code to GitHub and import the repo to [vercel.com](https://vercel.com/) — done! 🚀
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!  
+Feel free to [open an issue](https://github.com/dwiwijaya/nextjs-landing-starter/issues) or submit a pull request to improve this starter.
+
+---
+
+## 📄 License
+
+Licensed under the [MIT License](LICENSE).
+
+---
+
+## 🌍 Live Preview
+
+Check out the live version here:  
+👉 [https://nextjs-landing-starter.vercel.app/](https://nextjs-landing-starter.vercel.app/)
+
+---
+
+Made with 💙 by [Dwi Wijaya](https://github.com/dwiwijaya)
