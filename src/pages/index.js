@@ -19,6 +19,12 @@ export default function Home() {
     AOS.init({ duration: 500 })
   }, [])
 
+  // scroll to CTA
+  const scrollToCTA = () => {
+    const element = document.getElementById('contact')
+    if (element) element.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <>
       <NextSeo
@@ -44,14 +50,12 @@ export default function Home() {
             Automate customer interactions, schedule appointments, and streamline operations, even while you sleep.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://calendly.com/blockmangoacc2"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={scrollToCTA}
               className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full text-sm font-semibold transition"
             >
               Book Free Consultation
-            </a>
+            </button>
             <a
               href="#demo"
               className="bg-white border border-indigo-600 text-indigo-600 hover:bg-indigo-50 px-6 py-3 rounded-full text-sm font-semibold transition"
@@ -106,23 +110,25 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
               {
-                emoji: "🚀",
+                icon: "🚀",
                 title: "Rapid Implementation",
                 desc: "Get your AI solutions up and running in weeks, not months."
               },
               {
-                emoji: "👥",
+                icon: "👥",
                 title: "Expert Team",
                 desc: "Work with experienced AI specialists and data scientists."
               },
               {
-                emoji: "🎯",
+                icon: "🎯",
                 title: "Tailored Solutions",
                 desc: "Custom AI solutions designed specifically for your business needs."
               }
             ].map((point, i) => (
               <div key={i} data-aos="fade-right" data-aos-delay={i*150} className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 flex flex-col items-center text-center hover:shadow-xl transition">
-                <div className="text-4xl mb-4">{point.emoji}</div>
+                <div className="text-6xl mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+                  {point.icon}
+                </div>
                 <h3 className="font-semibold text-lg mb-2">{point.title}</h3>
                 <p className="text-slate-700 text-sm">{point.desc}</p>
               </div>
@@ -171,4 +177,4 @@ export default function Home() {
       </main>
     </>
   )
-          }
+              }
