@@ -60,23 +60,47 @@ export default function Home() {
         </div>
 
         {/* Services Section */}
-        <section className="px-6 py-12 max-w-6xl mx-auto text-center">
-          <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-6">AI Solutions That Work for You</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { icon: <PiUserCircleLight className="text-3xl text-indigo-500 mb-2"/>, title: "AI Receptionist", desc: "Never miss a lead. Answer queries and schedule appointments automatically." },
-              { icon: <PiRocketLight className="text-3xl text-indigo-500 mb-2"/>, title: "Task Automation", desc: "Streamline repetitive business tasks, saving hours every week." },
-              { icon: <PiPhoneLight className="text-3xl text-indigo-500 mb-2"/>, title: "AI Strategy & Consulting", desc: "Discover actionable AI opportunities and optimize your workflows." },
-              { icon: <PiChartLineLight className="text-3xl text-indigo-500 mb-2"/>, title: "Data Insights & Reporting", desc: "Gain insights from AI analytics to make smarter business decisions." },
-            ].map((service, i) => (
-              <div key={i} data-aos="fade-up" data-aos-delay={i*100} className="bg-white p-6 rounded-2xl border border-slate-200">
-                {service.icon}
-                <h3 className="text-lg font-semibold mb-1">{service.title}</h3>
-                <p className="text-slate-600 text-sm">{service.desc}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+        <section className="px-6 py-12 max-w-6xl mx-auto">
+  <h2 className="text-2xl md:text-4xl font-bold text-slate-900 text-center mb-6">AI Solutions Designed to Save You Time & Money</h2>
+  <div className="grid md:grid-cols-3 gap-6 mt-8">
+    {[
+      {
+        title: "AI Chatbot Solutions",
+        desc: "Revolutionize customer service with our intelligent chatbots.",
+        bullets: ["24/7 Availability", "Instant Responses", "Cost-effective"],
+        icon: <PiCheckLight className="text-indigo-500 w-6 h-6" />
+      },
+      {
+        title: "AI Automation",
+        desc: "Effortlessly automate repetitive tasks and processes.",
+        bullets: ["Time Savings", "Increased Productivity", "Error Reduction"],
+        icon: <PiCheckLight className="text-indigo-500 w-6 h-6" />
+      },
+      {
+        title: "AI Strategy Consulting",
+        desc: "Identify and implement AI opportunities for your business.",
+        bullets: ["Customized Solutions", "Expert Guidance", "Maximized ROI"],
+        icon: <PiCheckLight className="text-indigo-500 w-6 h-6" />
+      }
+    ].map((feature, i) => (
+      <div key={i} className="bg-white p-6 rounded-2xl shadow-md border border-slate-200 hover:shadow-xl transition">
+        <div className="flex items-center gap-3 mb-3">
+          {feature.icon}
+          <h3 className="text-lg font-semibold text-slate-900">{feature.title}</h3>
+        </div>
+        <p className="text-slate-600 mb-4">{feature.desc}</p>
+        <ul className="space-y-2">
+          {feature.bullets.map((bullet, index) => (
+            <li key={index} className="flex items-center gap-2 text-slate-700">
+              <PiCheckLight className="text-green-500 w-5 h-5" />
+              {bullet}
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+</section>
 
         {/* Why Choose Section */}
         <section className="bg-indigo-50 px-6 py-12 text-center">
