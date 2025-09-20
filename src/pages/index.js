@@ -41,11 +41,13 @@ export default function Home() {
             Your <span className="text-indigo-600">24/7 AI Receptionist</span>
           </motion.h1>
           <p className="text-sm md:text-lg text-slate-700 max-w-lg md:max-w-2xl mx-auto mb-8">
-            Automate customer interactions, schedule appointments, and streamline operations — even while you sleep.
+            Automate customer interactions, schedule appointments, and streamline operations, even while you sleep.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="#contact"
+              href="https://calendly.com/blockmangoacc2"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-full text-sm font-semibold transition"
             >
               Book Free Consultation
@@ -61,57 +63,59 @@ export default function Home() {
 
         {/* Services Section */}
         <section className="px-6 py-12 max-w-6xl mx-auto">
-  <h2 className="text-2xl md:text-4xl font-bold text-slate-900 text-center mb-6">AI Solutions Designed to Save You Time & Money</h2>
-  <div className="grid md:grid-cols-3 gap-6 mt-8">
-    {[
-      {
-        title: "AI Chatbot Solutions",
-        desc: "Revolutionize customer service with our intelligent chatbots.",
-        bullets: ["24/7 Availability", "Instant Responses", "Cost-effective"],
-        icon: <PiCheckLight className="text-indigo-500 w-6 h-6" />
-      },
-      {
-        title: "AI Automation",
-        desc: "Effortlessly automate repetitive tasks and processes.",
-        bullets: ["Time Savings", "Increased Productivity", "Error Reduction"],
-        icon: <PiCheckLight className="text-indigo-500 w-6 h-6" />
-      },
-      {
-        title: "AI Strategy Consulting",
-        desc: "Identify and implement AI opportunities for your business.",
-        bullets: ["Customized Solutions", "Expert Guidance", "Maximized ROI"],
-        icon: <PiCheckLight className="text-indigo-500 w-6 h-6" />
-      }
-    ].map((feature, i) => (
-      <div key={i} className="bg-white p-6 rounded-2xl shadow-md border border-slate-200 hover:shadow-xl transition">
-        <div className="flex items-center gap-3 mb-3">
-          {feature.icon}
-          <h3 className="text-lg font-semibold text-slate-900">{feature.title}</h3>
-        </div>
-        <p className="text-slate-600 mb-4">{feature.desc}</p>
-        <ul className="space-y-2">
-          {feature.bullets.map((bullet, index) => (
-            <li key={index} className="flex items-center gap-2 text-slate-700">
-              <PiCheckLight className="text-green-500 w-5 h-5" />
-              {bullet}
-            </li>
-          ))}
-        </ul>
-      </div>
-    ))}
-  </div>
-</section>
+          <h2 className="text-2xl md:text-4xl font-bold text-slate-900 text-center mb-6">
+            AI Solutions Designed to Save You Time & Money
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6 mt-8">
+            {[
+              {
+                title: "AI Chatbot Solutions",
+                desc: "Revolutionize customer service with our intelligent chatbots.",
+                bullets: ["24/7 Availability", "Instant Responses", "Cost-effective"],
+                icon: <PiCheckLight className="text-indigo-500 w-6 h-6" />
+              },
+              {
+                title: "AI Automation",
+                desc: "Effortlessly automate repetitive tasks and processes.",
+                bullets: ["Time Savings", "Increased Productivity", "Error Reduction"],
+                icon: <PiCheckLight className="text-indigo-500 w-6 h-6" />
+              },
+              {
+                title: "AI Strategy Consulting",
+                desc: "Identify and implement AI opportunities for your business.",
+                bullets: ["Customized Solutions", "Expert Guidance", "Maximized ROI"],
+                icon: <PiCheckLight className="text-indigo-500 w-6 h-6" />
+              }
+            ].map((feature, i) => (
+              <div key={i} className="bg-white p-6 rounded-2xl shadow-md border border-slate-200 hover:shadow-xl transition">
+                <div className="flex items-center gap-3 mb-3">
+                  {feature.icon}
+                  <h3 className="text-lg font-semibold text-slate-900">{feature.title}</h3>
+                </div>
+                <p className="text-slate-600 mb-4">{feature.desc}</p>
+                <ul className="space-y-2">
+                  {feature.bullets.map((bullet, index) => (
+                    <li key={index} className="flex items-center gap-2 text-slate-700">
+                      <PiCheckLight className="text-green-500 w-5 h-5" />
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
 
         {/* Why Choose Section */}
         <section className="bg-indigo-50 px-6 py-12 text-center">
           <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-6">Why Choose HouseOfKhaja</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
             {[
-              "Always Available — AI receptionist works 24/7",
-              "Smarter Customer Engagement — handle queries instantly",
-              "Scale Your Business — automate processes without extra staff",
-              "Cost-Effective Solutions — save money and time",
-              "Data-Driven Decisions — actionable analytics for growth"
+              "Always Available: AI receptionist works 24/7",
+              "Smarter Customer Engagement: handle queries instantly",
+              "Scale Your Business: automate processes without extra staff",
+              "Cost-Effective Solutions: save money and time",
+              "Data-Driven Decisions: actionable analytics for growth"
             ].map((point, i) => (
               <div key={i} data-aos="fade-right" data-aos-delay={i*100} className="bg-white p-4 sm:p-6 rounded-2xl border border-slate-200">
                 <p className="text-slate-700 text-sm">{point}</p>
@@ -139,8 +143,17 @@ export default function Home() {
         {/* CTA Section */}
         <section id="contact" className="bg-indigo-600 text-white py-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Start Automating Your Business Today</h2>
-          <p className="mb-6 text-slate-100 text-sm md:text-base">Book a free consultation and see how AI can handle your customer interactions, appointments, and repetitive tasks.</p>
-          <a href="#contact-form" className="bg-white text-indigo-600 hover:bg-indigo-50 px-8 py-3 rounded-full font-semibold transition">Book Free Consultation</a>
+          <p className="mb-6 text-slate-100 text-sm md:text-base">
+            Book a free consultation and see how AI can handle your customer interactions, appointments, and repetitive tasks.
+          </p>
+          <a
+            href="https://calendly.com/blockmangoacc2"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white text-indigo-600 hover:bg-indigo-50 px-8 py-3 rounded-full font-semibold transition"
+          >
+            Book Free Consultation
+          </a>
         </section>
 
         {/* Footer */}
@@ -152,4 +165,4 @@ export default function Home() {
       </main>
     </>
   )
-               }
+          }
