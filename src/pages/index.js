@@ -157,7 +157,7 @@ export default function Home() {
         {/* Footer */}
         <footer className="bg-slate-100 py-6 text-center text-slate-700 text-sm">
           &copy; {new Date().getFullYear()} HouseOfKhaja. AI solutions to automate, scale, and grow your business efficiently. <br />
-          Contact: hello@houseofkhaja.com
+          Contact: houseofkhaja@gmail.com
         </footer>
 
       </main>
