@@ -86,4 +86,89 @@ export default function Home() {
             ].map((feature, i) => (
               <div key={i} data-aos="fade-up" data-aos-delay={i*150} className="bg-white p-6 rounded-2xl shadow-md border border-slate-200 hover:shadow-xl transition">
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">{feature.title}</h3>
-                <p className="text-slate-600 mb-4
+                <p className="text-slate-600 mb-4">{feature.desc}</p>
+                <ul className="space-y-2">
+                  {feature.bullets.map((bullet, index) => (
+                    <li key={index} className="flex items-center gap-2 text-slate-700">
+                      <PiCheckLight className="text-green-500 w-5 h-5" />
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Why Choose Section */}
+        <section className="bg-indigo-50 px-6 py-12 text-center">
+          <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-6">Why Choose HOK?</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {[
+              {
+                emoji: "🚀",
+                title: "Rapid Implementation",
+                desc: "Get your AI solutions up and running in weeks, not months."
+              },
+              {
+                emoji: "👥",
+                title: "Expert Team",
+                desc: "Work with experienced AI specialists and data scientists."
+              },
+              {
+                emoji: "🎯",
+                title: "Tailored Solutions",
+                desc: "Custom AI solutions designed specifically for your business needs."
+              }
+            ].map((point, i) => (
+              <div key={i} data-aos="fade-right" data-aos-delay={i*150} className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 flex flex-col items-center text-center hover:shadow-xl transition">
+                <div className="text-4xl mb-4">{point.emoji}</div>
+                <h3 className="font-semibold text-lg mb-2">{point.title}</h3>
+                <p className="text-slate-700 text-sm">{point.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="px-6 py-12 max-w-5xl mx-auto text-center">
+          <h2 className="text-2xl md:text-4xl font-bold mb-6">What Our Clients Say</h2>
+          {[
+            { name: "Sarah Johnson", company: "TechStart Ltd", text: "The AI receptionist saved us countless hours and improved our bookings dramatically." },
+            { name: "Michael Chen", company: "DataFlow Solutions", text: "HouseOfKhaja’s automation system transformed how we manage clients." },
+            { name: "Emma Williams", company: "GrowthCorp", text: "Seamless, professional, and highly effective — the AI tools just work." }
+          ].map((t, i) => (
+            <div key={i} data-aos="fade-up" data-aos-delay={i*100} className="bg-white p-6 rounded-2xl border border-slate-200 mb-6">
+              <p className="text-slate-600 italic mb-2">"{t.text}"</p>
+              <h4 className="font-semibold">{t.name}</h4>
+              <p className="text-sm text-slate-500">{t.company}</p>
+            </div>
+          ))}
+        </section>
+
+        {/* CTA Section */}
+        <section id="contact" className="bg-indigo-600 text-white py-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Start Automating Your Business Today</h2>
+          <p className="mb-6 text-slate-100 text-sm md:text-base">
+            Book a free consultation and see how AI can handle your customer interactions, appointments, and repetitive tasks.
+          </p>
+          <a
+            href="https://calendly.com/blockmangoacc2"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white text-indigo-600 hover:bg-indigo-50 px-8 py-3 rounded-full font-semibold transition"
+          >
+            Book Free Consultation
+          </a>
+        </section>
+
+        {/* Footer */}
+        <footer className="bg-slate-100 py-6 text-center text-slate-700 text-sm">
+          &copy; {new Date().getFullYear()} HouseOfKhaja. AI solutions to automate, scale, and grow your business efficiently. <br />
+          Contact: hello@houseofkhaja.com
+        </footer>
+
+      </main>
+    </>
+  )
+          }
