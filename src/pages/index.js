@@ -136,21 +136,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Testimonials Section */}
-        <section className="px-6 py-12 max-w-5xl mx-auto text-center">
-          <h2 className="text-2xl md:text-4xl font-bold mb-6">What Our Clients Say</h2>
-          {[
-            { name: "Sarah Johnson", company: "TechStart Ltd", text: "The AI receptionist saved us countless hours and improved our bookings dramatically." },
-            { name: "Michael Chen", company: "DataFlow Solutions", text: "HouseOfKhaja’s automation system transformed how we manage clients." },
-            { name: "Emma Williams", company: "GrowthCorp", text: "Seamless, professional, and highly effective — the AI tools just work." }
-          ].map((t, i) => (
-            <div key={i} data-aos="fade-up" data-aos-delay={i*100} className="bg-white p-6 rounded-2xl border border-slate-200 mb-6">
-              <p className="text-slate-600 italic mb-2">"{t.text}"</p>
-              <h4 className="font-semibold">{t.name}</h4>
-              <p className="text-sm text-slate-500">{t.company}</p>
-            </div>
-          ))}
-        </section>
+       
 
         {/* CTA Section */}
         <section id="contact" className="bg-indigo-600 text-white py-12 text-center">
@@ -159,7 +145,7 @@ export default function Home() {
             Book a free consultation and see how AI can handle your customer interactions, appointments, and repetitive tasks.
           </p>
           <a
-            href="https://calendly.com/blockmangoacc2"
+            href="https://calendly.com/houseofkhaja"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white text-indigo-600 hover:bg-indigo-50 px-8 py-3 rounded-full font-semibold transition"
