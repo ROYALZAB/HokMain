@@ -4,7 +4,7 @@ import { NextSeo } from 'next-seo'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { motion } from 'framer-motion'
-import { PiPhoneLight, PiRocketLight, PiChartLineLight, PiUserCircleLight } from 'react-icons/pi'
+import { PiCheckLight, PiUserCircleLight, PiRocketLight, PiPhoneLight, PiChartLineLight } from 'react-icons/pi'
 import { useEffect } from 'react'
 import { Plus_Jakarta_Sans } from 'next/font/google'
 
