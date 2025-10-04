@@ -19,14 +19,14 @@ export default function Home() {
     // Init animations
     AOS.init({ duration: 500 })
 
-    // Load Voiceflow Chatbot
+    // Load Voiceflow Chatbot (Khaja AI)
     const v = document.createElement('script')
     v.src = 'https://cdn.voiceflow.com/widget-next/bundle.mjs'
     v.type = 'text/javascript'
     v.onload = function() {
       if (window.voiceflow) {
         window.voiceflow.chat.load({
-          verify: { projectID: '68dab22d2334fb768c335589' },
+          verify: { projectID: '68e136542a1c2b99e1885e12' },
           url: 'https://general-runtime.voiceflow.com',
           versionID: 'production',
           voice: {
@@ -42,6 +42,13 @@ export default function Home() {
   const scrollToCTA = () => {
     const element = document.getElementById('contact')
     if (element) element.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  // trigger bot open
+  const openBot = () => {
+    if (window.voiceflow && window.voiceflow.chat) {
+      window.voiceflow.chat.open()
+    }
   }
 
   return (
@@ -75,12 +82,12 @@ export default function Home() {
             >
               Book Free Consultation
             </button>
-            <a
-              href="#demo"
+            <button
+              onClick={openBot}
               className="bg-white border border-indigo-600 text-indigo-600 hover:bg-indigo-50 px-6 py-3 rounded-full text-sm font-semibold transition"
             >
               Try AI Demo
-            </a>
+            </button>
           </div>
         </div>
 
@@ -91,22 +98,22 @@ export default function Home() {
           </h2>
           <div className="grid md:grid-cols-3 gap-6 mt-8">
             {[
-  {
-    title: "AI Chatbots & Callers",
-    desc: "Automate conversations, handle FAQs, book appointments, and even follow up via call or chat 24/7.",
-    bullets: ["Multilingual", "CRM Integration", "Instant Lead Qualification"],
-  },
-  {
-    title: "AI Outreach System",
-    desc: "Reach, engage, and convert prospects automatically through personalized outreach.",
-    bullets: ["Automated Follow-Ups", "Lead Tracking", "Calendar Sync"],
-  },
-  {
-    title: "AI Websites",
-    desc: "Websites that chat, qualify leads, and close clients all powered by integrated AI systems.",
-    bullets: ["AI Lead Capture", "Smart FAQs", "WhatsApp & CRM Integration"],
-  }
-].map((feature, i) => (
+              {
+                title: "AI Chatbots & Callers",
+                desc: "Automate conversations, handle FAQs, book appointments, and even follow up via call or chat 24/7.",
+                bullets: ["Multilingual", "CRM Integration", "Instant Lead Qualification"],
+              },
+              {
+                title: "AI Outreach System",
+                desc: "Reach, engage, and convert prospects automatically through personalized outreach.",
+                bullets: ["Automated Follow-Ups", "Lead Tracking", "Calendar Sync"],
+              },
+              {
+                title: "AI Websites",
+                desc: "Websites that chat, qualify leads, and close clients all powered by integrated AI systems.",
+                bullets: ["AI Lead Capture", "Smart FAQs", "WhatsApp & CRM Integration"],
+              }
+            ].map((feature, i) => (
               <div key={i} data-aos="fade-up" data-aos-delay={i*150} className="bg-white p-6 rounded-2xl shadow-md border border-slate-200 hover:shadow-xl transition">
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">{feature.title}</h3>
                 <p className="text-slate-600 mb-4">{feature.desc}</p>
