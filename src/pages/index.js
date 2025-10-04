@@ -16,7 +16,26 @@ const plusJakarta = Plus_Jakarta_Sans({
 
 export default function Home() {
   useEffect(() => {
+    // Init animations
     AOS.init({ duration: 500 })
+
+    // Load Voiceflow Chatbot
+    const v = document.createElement('script')
+    v.src = 'https://cdn.voiceflow.com/widget-next/bundle.mjs'
+    v.type = 'text/javascript'
+    v.onload = function() {
+      if (window.voiceflow) {
+        window.voiceflow.chat.load({
+          verify: { projectID: '68dab22d2334fb768c335589' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production',
+          voice: {
+            url: 'https://runtime-api.voiceflow.com'
+          }
+        })
+      }
+    }
+    document.body.appendChild(v)
   }, [])
 
   // scroll to CTA
@@ -136,8 +155,6 @@ export default function Home() {
           </div>
         </section>
 
-       
-
         {/* CTA Section */}
         <section id="contact" className="bg-indigo-600 text-white py-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Start Automating Your Business Today</h2>
@@ -163,4 +180,4 @@ export default function Home() {
       </main>
     </>
   )
-              }
+}
