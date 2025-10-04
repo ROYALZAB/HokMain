@@ -74,17 +74,17 @@ export default function Home() {
             {[
   {
     title: "AI Chatbots & Callers",
-    desc: "Automate conversations, handle FAQs, book appointments, and even follow up via call or chat — 24/7.",
+    desc: "Automate conversations, handle FAQs, book appointments, and even follow up via call or chat 24/7.",
     bullets: ["Multilingual", "CRM Integration", "Instant Lead Qualification"],
   },
   {
     title: "AI Outreach System",
-    desc: "Reach, engage, and convert prospects automatically through personalized WhatsApp, LinkedIn, and Email outreach.",
+    desc: "Reach, engage, and convert prospects automatically through personalized outreach.",
     bullets: ["Automated Follow-Ups", "Lead Tracking", "Calendar Sync"],
   },
   {
     title: "AI Websites",
-    desc: "Websites that chat, qualify leads, and close clients — all powered by integrated AI systems.",
+    desc: "Websites that chat, qualify leads, and close clients all powered by integrated AI systems.",
     bullets: ["AI Lead Capture", "Smart FAQs", "WhatsApp & CRM Integration"],
   }
 ].map((feature, i) => (
