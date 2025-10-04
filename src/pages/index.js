@@ -72,22 +72,22 @@ export default function Home() {
           </h2>
           <div className="grid md:grid-cols-3 gap-6 mt-8">
             {[
-              {
-                title: "AI Chatbot Solutions",
-                desc: "Revolutionize customer service with our intelligent chatbots.",
-                bullets: ["24/7 Availability", "Instant Responses", "Cost-effective"],
-              },
-              {
-                title: "AI Automation",
-                desc: "Effortlessly automate repetitive tasks and processes.",
-                bullets: ["Time Savings", "Increased Productivity", "Error Reduction"],
-              },
-              {
-                title: "AI Strategy Consulting",
-                desc: "Identify and implement AI opportunities for your business.",
-                bullets: ["Customized Solutions", "Expert Guidance", "Maximized ROI"],
-              }
-            ].map((feature, i) => (
+  {
+    title: "AI Chatbots & Callers",
+    desc: "Automate conversations, handle FAQs, book appointments, and even follow up via call or chat — 24/7.",
+    bullets: ["Multilingual", "CRM Integration", "Instant Lead Qualification"],
+  },
+  {
+    title: "AI Outreach System",
+    desc: "Reach, engage, and convert prospects automatically through personalized WhatsApp, LinkedIn, and Email outreach.",
+    bullets: ["Automated Follow-Ups", "Lead Tracking", "Calendar Sync"],
+  },
+  {
+    title: "AI Websites",
+    desc: "Websites that chat, qualify leads, and close clients — all powered by integrated AI systems.",
+    bullets: ["AI Lead Capture", "Smart FAQs", "WhatsApp & CRM Integration"],
+  }
+].map((feature, i) => (
               <div key={i} data-aos="fade-up" data-aos-delay={i*150} className="bg-white p-6 rounded-2xl shadow-md border border-slate-200 hover:shadow-xl transition">
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">{feature.title}</h3>
                 <p className="text-slate-600 mb-4">{feature.desc}</p>
