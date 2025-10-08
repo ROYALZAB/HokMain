@@ -1,4 +1,4 @@
-// File: pages/solvexa-test.js
+// File: pages/test-solvexa.js
 import Head from 'next/head'
 import { motion } from 'framer-motion'
 import { Plus_Jakarta_Sans } from 'next/font/google'
